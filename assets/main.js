@@ -8,9 +8,9 @@ $(function() {
             dataType: 'jsonp',
             success: function(response) {
               // handle response
-                for(i = 0; i < response.courses.length; i++){
-                    $("#badges").prepend("<div class='course'></div>");
-                }
+                $.each(response.courses.completed, function(){
+                   $("#badges").prepend("<div class='course></div>"); 
+                });
             }
       });
     
